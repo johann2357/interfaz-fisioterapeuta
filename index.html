@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -64,92 +64,16 @@
             </div>
           </ul>
           <ul class="nav nav-sidebar">
-            <li class="">
-              <a href="#">
-                <img src="media/user1.jpg" class="img-circle user-pic">
-                <span class="user-name">Joe Smith</span>
-              </a>
-            </li>
-            <li class="active">
-              <a href="#">
-                <img src="media/user3.jpg" class="img-circle user-pic">
-                <span class="user-name">Jane Doe</span>
-              </a>
-            </li>
-            <li class="">
-              <a href="#">
-                <img src="media/user2.jpg" class="img-circle user-pic">
-                <span class="user-name">Axel Rose</span>
+            <li class="" ng-repeat="patient in patients">
+              <a ng-click="setCurPatient(patient)" href="#ejercicios-en-casa">
+                <img ng-src="{{ patient.pic }}" class="img-circle user-pic">
+                <span class="user-name">{{ patient.name }}</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="profile-container">
-            <div class="row">
-              <div class="col-md-2 user-pic-container">
-                <img src="media/user3.jpg" class="img-circle user-pic">
-              </div>
-              <div class="col-md-10">
-                <p class="user-name">Jane Doe</p>
-                <p class="user-ill">Hernia Lumbar L2</p>
-                <p class="user-day">Dia 6</p>
-              </div>
-            </div>
-          </div>
-          <div class="tabs-container">
-            <ul class="nav nav-tabs nav-justified">
-              <li role="presentation"><a href="#">Progreso</a></li>
-              <li role="presentation" class="active">
-                <a href="#">Ejercicios en casa</a>
-              </li>
-              <li role="presentation"><a href="#">Sesiones en sala</a></li>
-            </ul>
-          </div>
-          <div class="main-container gridster ready">
-            <!-- FUENTE : http://ejercicios-terapeuticos.blogspot.com/p/ejercicios-de-williams.html -->
-            <ul style="height: auto; width: 100%; position: relative;">
-              <li data-row="1" data-col="1" data-sizex="2" data-sizey="2"
-                  class="gs-w" style="position: absolute;">
-                <header>DECUBITO SUPINO</header>
-                0
-              </li>
-              <li data-row="1" data-col="2" data-sizex="2" data-sizey="2"
-                  class="gs-w">
-                <header>BIPEDESTACION</header>
-                1
-              </li>
-              <li data-row="1" data-col="3" data-sizex="2" data-sizey="2"
-                  class="gs-w">
-                <header>RETROVERSION PELVICA</header>
-                2
-              </li>
-              <li data-row="1" data-col="4" data-sizex="2" data-sizey="2"
-                  class="gs-w">
-                <header>CORRECCION POSTURAL</header>
-                3
-              </li>
-              <li data-row="2" data-col="1" data-sizex="2" data-sizey="2"
-                  class="gs-w">
-                <header>POSICION DE PARTIDA</header>
-                3
-              </li>
-
-              <li data-row="2" data-col="2" data-sizex="2" data-sizey="2"
-                  class="gs-w">
-                <header>FLEXIONAR RODILLAS</header>
-                4
-              </li>
-            </ul>
-          </div>
-
-          <a id="add-exercise" href="#"
-             data-toggle="modal" data-target="#add-exercise-modal">
-            <div class="plus">
-              <img class="plus-icon" src="static/images/add.png">
-            </div>
-          </a>
-
+          <div ng-view></div>
         </div>
       </div>
     </div>
@@ -267,16 +191,25 @@
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
     <script src="static/js/jquery.gridster.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-route.js"></script>
+
+    <script type="text/javascript" src="static/js/angular-related/main.js"></script>
+    <script type="text/javascript" src="static/js/angular-related/root-scope-init.js"></script>
+
     <script>
       var gridster;
-      $(function(){
-        gridster = $(".gridster ul").gridster({
-          widget_base_dimensions: [100, 120],
-          widget_margins: [5, 5],
-          draggable: {
-            handle: 'header'
-          }
-        }).data('gridster');
+      $(document).ready(function(){
+        // wait for partials to finish loading
+        setTimeout(function () {
+          gridster = $(".gridster ul").gridster({
+            widget_base_dimensions: [100, 120],
+            widget_margins: [5, 5],
+            draggable: {
+              handle: 'header'
+            }
+          }).data('gridster');
+        }, 100);
       });
     </script>
   </body>

@@ -1,5 +1,8 @@
-** Requirements
-* Sass installed globally
+Interfaz para el fisioterapeuta
+==============
 
-** Compile Sass
-* Just run the command compile_sass
+## Requirements
+- Sass installed globally
+
+## Compile Sass
+- Just run the command compile_sass

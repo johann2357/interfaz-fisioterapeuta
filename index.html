@@ -57,14 +57,15 @@
           <ul class="nav nav-sidebar">
             <div class="input-group search-box">
               <input type="text" class="form-control"
-                     placeholder="Buscar paciente">
+                     placeholder="Buscar paciente"
+                     ng-model="patientSearch.name">
               <span class="input-group-addon">
                 <i class="fa fa-search"></i>
               </span>
             </div>
           </ul>
           <ul class="nav nav-sidebar">
-            <li class="" ng-repeat="patient in patients">
+            <li class="" ng-repeat="patient in patients | filter:patientSearch">
               <a ng-click="setCurPatient(patient)" href="#ejercicios-en-casa">
                 <img ng-src="{{ patient.pic }}" class="img-circle user-pic">
                 <span class="user-name">{{ patient.name }}</span>
@@ -196,21 +197,10 @@
 
     <script type="text/javascript" src="static/js/angular-related/main.js"></script>
     <script type="text/javascript" src="static/js/angular-related/root-scope-init.js"></script>
+    <script type="text/javascript" src="static/js/angular-related/directives.js"></script>
+    <script type="text/javascript" src="static/js/angular-related/ProgresoCtrl.js"></script>
+    <script type="text/javascript" src="static/js/angular-related/EjerciciosCasaCtrl.js"></script>
+    <script type="text/javascript" src="static/js/angular-related/SesionesSalaCtrl.js"></script>
 
-    <script>
-      var gridster;
-      $(document).ready(function(){
-        // wait for partials to finish loading
-        setTimeout(function () {
-          gridster = $(".gridster ul").gridster({
-            widget_base_dimensions: [100, 120],
-            widget_margins: [5, 5],
-            draggable: {
-              handle: 'header'
-            }
-          }).data('gridster');
-        }, 100);
-      });
-    </script>
   </body>
 </html>

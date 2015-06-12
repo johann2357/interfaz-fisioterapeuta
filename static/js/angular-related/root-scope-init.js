@@ -20,12 +20,32 @@ angular.module('app').
                     desease: "Hernia Lumbar L2",
                     day: 8,
                 },
-            ]
-
+            ];
             $rootScope.curPatient = $rootScope.patients[0];
 
             $rootScope.setCurPatient = function (patient) {
                 $rootScope.curPatient = patient;
-            }
+            };
+
+            $rootScope.tabs = [
+                {
+                    name: "Progreso",
+                    href: "#progreso",
+                },
+                {
+                    name: "Ejercicios en casa",
+                    href: "#ejercicios-en-casa",
+                },
+                {
+                    name: "Sesiones en sala",
+                    href: "#sesiones-en-sala",
+                },
+            ];
+            $rootScope.curTab = $rootScope.tabs[1];
+
+            $rootScope.setCurTab = function (tab) {
+                $rootScope.curTab = tab;
+            };
+
         }
     ]);

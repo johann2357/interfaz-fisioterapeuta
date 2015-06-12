@@ -1,0 +1,9 @@
+          <div class="tabs-container">
+            <ul class="nav nav-tabs nav-justified">
+              <li role="presentation"
+                  ng-repeat="tab in tabs"
+                  ng-class="{'active': tab == curTab}">
+                <a ng-href="{{ tab.href }}">{{ tab.name }}</a>
+              </li>
+            </ul>
+          </div>

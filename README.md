@@ -5,4 +5,4 @@ Interfaz para el fisioterapeuta
 - Sass installed globally
 
 ## Compile Sass
-- Just run the command compile_sass
+- Just run the executable compile_sass

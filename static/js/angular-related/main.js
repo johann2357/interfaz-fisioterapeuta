@@ -5,19 +5,32 @@ var app = angular.module("app", [
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
-            when('/ejercicios-en-casa', {
-                controller: 'EjerciciosCasaCtrl',
-                templateUrl: 'partials/ejercicios-en-casa.html',
+            when('/informacion', {
+                controller: 'InformacionCtrl',
+                templateUrl: 'partials/informacion.html',
             }).
-            when('/sesiones-en-sala', {
-                controller: 'SesionesSalaCtrl',
-                templateUrl: 'partials/sesiones-en-sala.html',
+            when('/plan-de-tratamiento', {
+                controller: 'PlanCtrl',
+                templateUrl: 'partials/plan.html',
+            }).
+            when('/evolucion-semanal', {
+                controller: 'EvolucionCtrl',
+                templateUrl: 'partials/evolucion.html',
             }).
             when('/progreso', {
                 controller: 'ProgresoCtrl',
                 templateUrl: 'partials/progreso.html',
             }).
+            when('/historial', {
+                controller: 'HistorialCtrl',
+                templateUrl: 'partials/historial.html',
+            }).
+
+            when('/ejercicios-en-casa', {
+                controller: 'EjerciciosCasaCtrl',
+                templateUrl: 'partials/ejercicios-en-casa.html',
+            }).
             otherwise({
-                redirectTo: '/ejercicios-en-casa'
+                redirectTo: '/informacion'
             });
     }]);

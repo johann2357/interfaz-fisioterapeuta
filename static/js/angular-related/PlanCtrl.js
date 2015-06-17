@@ -1,7 +1,6 @@
 angular.module('app').
-    controller('ProgresoCtrl', [
+    controller('PlanCtrl', [
         '$scope', '$rootScope',
         function ($scope, $rootScope) {
-            $rootScope.setCurTab($rootScope.tabs[3]);
-
+            $rootScope.setCurTab($rootScope.tabs[1]);
         }]);

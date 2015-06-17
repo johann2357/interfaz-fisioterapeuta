@@ -2,7 +2,7 @@ angular.module('app').
     controller('EjerciciosCasaCtrl', [
         '$scope', '$rootScope', '$timeout',
         function ($scope, $rootScope, $timeout) {
-            $rootScope.setCurTab($rootScope.tabs[1]);
+            $rootScope.setCurTab($rootScope.tabs[5]);
 
             $scope.init = function () {
                 $timeout(function () {

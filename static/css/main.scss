@@ -275,6 +275,13 @@ body {
     }
 }
 
+div.report-card {
+    margin: 30px;
+    padding: 40px;
+    background-color: $colorLightMain;
+    box-shadow: 10px 10px 5px $colorDark5;
+}
+
 .nav-tabs li {
     font-size: 14px;
 }

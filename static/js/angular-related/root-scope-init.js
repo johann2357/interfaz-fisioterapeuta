@@ -98,19 +98,31 @@ angular.module('app').
 
             $rootScope.tabs = [
                 {
+                    name: "Información",
+                    href: "#informacion",
+                },
+                {
+                    name: "Plan de tratamiento",
+                    href: "#plan-de-tratamiento",
+                },
+                {
+                    name: "Evolución semanal",
+                    href: "#evolucion-semanal",
+                },
+                {
                     name: "Progreso",
                     href: "#progreso",
+                },
+                {
+                    name: "Historial",
+                    href: "#historial",
                 },
                 {
                     name: "Ejercicios en casa",
                     href: "#ejercicios-en-casa",
                 },
-                {
-                    name: "Sesiones en sala",
-                    href: "#sesiones-en-sala",
-                },
             ];
-            $rootScope.curTab = $rootScope.tabs[1];
+            $rootScope.curTab = $rootScope.tabs[0];
 
             $rootScope.setCurTab = function (tab) {
                 $rootScope.curTab = tab;

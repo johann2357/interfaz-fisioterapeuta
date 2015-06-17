@@ -1,0 +1,17 @@
+/* GROUPED FORM */
+
+form.grouped-form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+form.grouped-form .grouped-form-tittle {
+    position: absolute;
+    background: white;
+    top: -15px;
+    left: 20px;
+    font-size: 18px;
+}

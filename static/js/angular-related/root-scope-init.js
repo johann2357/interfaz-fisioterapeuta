@@ -3,8 +3,8 @@ angular.module('app').
         function ($rootScope) {
             var exercises = [
                 {
-                    name: "Dominadas",
-                    pic: "static/images/exercises/dominadas.jpg",
+                    name: "Williams 1",
+                    pic: "static/images/exercises/williams1.png",
                     series: 3,
                     reps: 10,
                     time: 5,
@@ -18,7 +18,7 @@ angular.module('app').
                 },
                 {
                     name: "Estiramiento de gluteos",
-                    pic: "static/images/exercises/estiramiento-de-gluteos.jpg",
+                    pic: "static/images/exercises/gluteos.jpg",
                     series: 3,
                     reps: 10,
                     time: 5,
@@ -59,8 +59,8 @@ angular.module('app').
                     time: 5,
                 },
                 {
-                    name: "Sentadillas con barra",
-                    pic: "static/images/exercises/sentadillas-con-barra.jpg",
+                    name: "Williams 2",
+                    pic: "static/images/exercises/williams2.png",
                     series: 3,
                     reps: 10,
                     time: 5,

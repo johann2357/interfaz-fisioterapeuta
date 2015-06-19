@@ -12,10 +12,11 @@
                   data-col="{{ 1 + $index % 4 }}"
                   class="gs-w">
                 <header>{{ exercise.name }}</header>
-                <img ng-src="{{ exercise.pic }}" width="100px" height="100px"></img>
+                <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
                 <div>Series: {{ exercise.series }}</div>
-                <div>Reps: {{ exercise.reps }}</div>
-                <div>Tiempo: {{ exercise.time }}</div>
+                <div>Repeticiones: {{ exercise.reps }}</div>
+                <div>Mantenimiento: {{ exercise.time }} seg</div>
+                <div>Reposo: {{ exercise.time }} seg</div>
               </li>
             </ul>
           </div>

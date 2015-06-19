@@ -1,2 +1,61 @@
 <div patient-profile></div>
 <div patient-tabs></div>
+
+<div class="main-container">
+        <form class="form-horizontal grouped-form">
+              <span class="grouped-form-tittle">Meta y objetivos</span>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Meta</label>
+                <div class="col-sm-10">
+                  <input class="form-control" ng-model="curPatient.goal">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Objetivos generales:</label>
+                <div class="col-sm-10">
+                  <input class="form-control" value="Objetivo general">
+                  <textarea class="form-control" rows="2" placeholder="Objetivos especificos para este objetivo general"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                  <input class="form-control" value="Objetivo general">
+                  <textarea class="form-control" rows="2" placeholder="Objetivos especificos para este objetivo general"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label"></label>
+                <div class="col-sm-10">
+                  <i class="fa fa-plus" />
+                </div>
+              </div>
+        </form>
+        <form class="form-horizontal grouped-form">
+              <span class="grouped-form-tittle">Tratamiento terapeutico</span>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Agentes fisicos:</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" placeholder=""></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Instrumentos:</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" placeholder=""></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Ejercicios:</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" placeholder=""></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Detalles extra:</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" rows="3" placeholder="Requiere ir al psicologo, alimentos que ayudan a la recuperacion, etc"></textarea>
+                </div>
+              </div>
+        </form>
+</div>

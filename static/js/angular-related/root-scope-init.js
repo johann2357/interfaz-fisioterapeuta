@@ -70,6 +70,10 @@ angular.module('app').
             $rootScope.patients = [
                 {
                     name: "Joe Smith",
+                    age: 35,
+                    job: "Obrero",
+                    phone: 98788555,
+                    goal: "Jugar futbol",
                     pic: "media/user1.jpg",
                     desease: "Hernia Lumbar L2",
                     day: 6,
@@ -77,6 +81,10 @@ angular.module('app').
                 },
                 {
                     name: "Jane Doe",
+                    age: 45,
+                    job: "Catedratico",
+                    phone: 98788555,
+                    goal: "Caminar normalmente",
                     pic: "media/user2.jpg",
                     desease: "Hernia Lumbar L2",
                     day: 4,
@@ -84,6 +92,10 @@ angular.module('app').
                 },
                 {
                     name: "Axel Rose",
+                    age: 25,
+                    job: "Modelo",
+                    phone: 98788555,
+                    goal: "Ir al gym para conservar la figura",
                     pic: "media/user3.jpg",
                     desease: "Hernia Lumbar L2",
                     day: 8,

@@ -2,27 +2,50 @@
 
           <div patient-tabs></div>
 
-          <div class="main-container gridster ready">
+          <div class="main-container">
             <!-- FUENTE : http://ejercicios-terapeuticos.blogspot.com/p/ejercicios-de-williams.html -->
-            <ul style="height: auto; width: 100%; position: relative;">
-              <li ng-repeat="exercise in curPatient.exercises"
-                  data-sizex="2"
-                  data-sizey="2"
-                  data-row="{{ 1 + ($index - $index % 4) / 4}}"
-                  data-col="{{ 1 + $index % 4 }}"
-                  class="gs-w">
-                <header>{{ exercise.name }}</header>
-                <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
-                <div>Series: {{ exercise.series }}</div>
-                <div>Repeticiones: {{ exercise.reps }}</div>
-                <div>Mantenimiento: {{ exercise.time }} seg</div>
-                <div>Reposo: {{ exercise.time }} seg</div>
-              </li>
-            </ul>
+            <h2>Estiramiento</h2>
+            <div class="sortable">
+              <ul style="height: auto; width: 100%; position: relative;">
+                <li ng-repeat="exercise in curPatient.exercises | filter: { fase:'Estiramiento' }">
+                  <header>{{ exercise.name }}</header>
+                  <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
+                  <div>Series: {{ exercise.series }}</div>
+                  <div>Repeticiones: {{ exercise.reps }}</div>
+                  <div>Mantenimiento: {{ exercise.time }} seg</div>
+                  <div>Reposo: {{ exercise.time }} seg</div>
+                </li>
+              </ul>
+            </div>
+            <h2>Calentamiento</h2>
+            <div class="sortable">
+              <ul style="height: auto; width: 100%; position: relative;">
+                <li ng-repeat="exercise in curPatient.exercises | filter: { fase:'Calentamiento' }">
+                  <header>{{ exercise.name }}</header>
+                  <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
+                  <div>Series: {{ exercise.series }}</div>
+                  <div>Repeticiones: {{ exercise.reps }}</div>
+                  <div>Mantenimiento: {{ exercise.time }} seg</div>
+                  <div>Reposo: {{ exercise.time }} seg</div>
+                </li>
+              </ul>
+            </div>
+            <h2>Ejercicios</h2>
+            <div class="sortable">
+              <ul style="height: auto; width: 100%; position: relative;">
+                <li ng-repeat="exercise in curPatient.exercises | filter: { fase:'Ejercicios' }">
+                  <header>{{ exercise.name }}</header>
+                  <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
+                  <div>Series: {{ exercise.series }}</div>
+                  <div>Repeticiones: {{ exercise.reps }}</div>
+                  <div>Mantenimiento: {{ exercise.time }} seg</div>
+                  <div>Reposo: {{ exercise.time }} seg</div>
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <a id="add-exercise" href="#"
-             data-toggle="modal" data-target="#add-exercise-modal">
+          <a id="add-exercise" data-toggle="modal" data-target="#add-exercise-modal">
             <div class="plus">
               <img class="plus-icon" src="static/images/add.png">
             </div>

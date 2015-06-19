@@ -146,7 +146,7 @@ div {
     }
 }
 
-.gridster * {
+.sortable * {
     margin: 0;
     padding: 0;
 }
@@ -175,6 +175,7 @@ body {
     bottom: 0;
     padding-right: 23px;
     padding-bottom: 23px;
+    cursor: pointer;
 
     img.plus-icon {
         width: 56px;
@@ -182,7 +183,7 @@ body {
     }
 }
 
-.gridster {
+.sortable {
     ul {
         background-color: white;
     }
@@ -191,18 +192,21 @@ body {
         font-weight: bold;
         text-align: center;
         line-height: 100%;
+        background: $colorLightMain;
+        cursor: pointer;
+        width: 220px;
+        height: 260px;
+        display: inline-block;
+        margin: 5px;
     }
     margin: 0 auto;
+    margin-bottom: 50px;
     opacity: .8;
     -webkit-transition: opacity .6s;
     -moz-transition: opacity .6s;
     -o-transition: opacity .6s;
     -ms-transition: opacity .6s;
     transition: opacity .6s;
-    .gs-w {
-        background: $colorLightMain;
-        cursor: pointer;
-    }
     .player {
         background: $colorLight1;
     }

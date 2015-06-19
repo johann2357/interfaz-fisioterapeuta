@@ -3,11 +3,12 @@ angular.module('app').
         function ($rootScope) {
             var exercises = [
                 {
-                    name: "Williams 1",
+                    name: "Estiramiento psoas",
                     pic: "static/images/exercises/williams1.png",
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Estiramiento",
                 },
                 {
                     name: "Estiramiento de espalda",
@@ -15,6 +16,7 @@ angular.module('app').
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Estiramiento",
                 },
                 {
                     name: "Estiramiento de gluteos",
@@ -22,6 +24,7 @@ angular.module('app').
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Calentamiento",
                 },
                 {
                     name: "Estiramiento de pantorrilla",
@@ -29,6 +32,7 @@ angular.module('app').
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Calentamiento",
                 },
                 {
                     name: "Estiramiento de pierna",
@@ -36,34 +40,15 @@ angular.module('app').
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Ejercicios",
                 },
                 {
-                    name: "Planchas",
-                    pic: "static/images/exercises/planchas.jpg",
-                    series: 3,
-                    reps: 10,
-                    time: 5,
-                },
-                {
-                    name: "Planchas con aplauso",
-                    pic: "static/images/exercises/planchas-con-aplauso.jpg",
-                    series: 3,
-                    reps: 10,
-                    time: 5,
-                },
-                {
-                    name: "Sentadillas",
-                    pic: "static/images/exercises/sentadillas.jpg",
-                    series: 3,
-                    reps: 10,
-                    time: 5,
-                },
-                {
-                    name: "Williams 2",
+                    name: "Retroversión pélvica",
                     pic: "static/images/exercises/williams2.png",
                     series: 3,
                     reps: 10,
                     time: 5,
+                    fase: "Ejercicios",
                 },
             ];
 

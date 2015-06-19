@@ -5,15 +5,9 @@ angular.module('app').
             $rootScope.setCurTab($rootScope.tabs[5]);
 
             $scope.init = function () {
-                $timeout(function () {
-                    var gridster = $(".gridster ul").gridster({
-                        widget_base_dimensions: [100, 120],
-                        widget_margins: [5, 5],
-                        draggable: {
-                          handle: 'header'
-                        }
-                    }).data('gridster');
-                }, 100);
+                $(".sortable ul").sortable({
+                    revert: 300,
+                });
             }
 
             $scope.init();

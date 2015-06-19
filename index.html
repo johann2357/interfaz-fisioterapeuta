@@ -74,40 +74,40 @@
                   <div class="row">
                     <div class="col-md-6">
                       <form>
-                        <h5>DIFICULTAD</h5>
-                        <div class="checkbox">
+                        <h5>FASE</h5>
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Facil
+                            <input type="radio" value="option1" name="fase"> Estiramiento
                           </label>
                         </div>
-                        <div class="checkbox">
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Medio
+                            <input type="radio" value="option1" name="fase"> Calentamiento
                           </label>
                         </div>
-                        <div class="checkbox">
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Dificil
+                            <input type="radio" value="option1" name="fase"> Ejercicios
                           </label>
                         </div>
                       </form>
                     </div>
                     <div class="col-md-6">
                       <form>
-                        <h5>FASE</h5>
-                        <div class="checkbox">
+                        <h5>DIFICULTAD</h5>
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Estiramiento
+                            <input type="radio" value="option1" name="dificultad"> Facil
                           </label>
                         </div>
-                        <div class="checkbox">
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Calentamiento
+                            <input type="radio" value="option1" name="dificultad"> Medio
                           </label>
                         </div>
-                        <div class="checkbox">
+                        <div class="radio">
                           <label>
-                            <input type="checkbox" value="option1"> Ejercicios
+                            <input type="radio" value="option1" name="dificultad"> Dificil
                           </label>
                         </div>
                       </form>
@@ -157,7 +157,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Agregar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -168,9 +168,9 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="static/js/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-1.11.3.js"></script>
+    <script src="lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/jquery.gridster.js"></script>
     <script type="text/javascript" src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="lib/angular/angular-route.js"></script>
 

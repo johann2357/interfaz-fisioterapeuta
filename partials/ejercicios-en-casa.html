@@ -4,39 +4,20 @@
 
           <div class="main-container">
             <!-- FUENTE : http://ejercicios-terapeuticos.blogspot.com/p/ejercicios-de-williams.html -->
-            <div class="sortable">
+            <div class="sortable" ng-repeat="fase_name in ['Estiramiento', 'Calentamiento', 'Ejercicios']">
               <ul style="height: auto; width: 100%; position: relative;">
-                <li class="blue" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Estiramiento' }">
+                <li ng-class="{'blue': fase_name == 'Estiramiento',
+                              'green': fase_name == 'Ejercicios',
+                              'red': fase_name == 'Calentamiento'}"
+                    ng-repeat="exercise in curPatient.exercises | filter: { fase:fase_name }">
                   <header>{{ exercise.name }}</header>
                   <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
-                  <div>Series: {{ exercise.series }}</div>
-                  <div>Repeticiones: {{ exercise.reps }}</div>
-                  <div>Mantenimiento: {{ exercise.time }} seg</div>
-                  <div>Reposo: {{ exercise.time }} seg</div>
-                </li>
-              </ul>
-            </div>
-            <div class="sortable">
-              <ul style="height: auto; width: 100%; position: relative;">
-                <li class="red" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Calentamiento' }">
-                  <header>{{ exercise.name }}</header>
-                  <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
-                  <div>Series: {{ exercise.series }}</div>
-                  <div>Repeticiones: {{ exercise.reps }}</div>
-                  <div>Mantenimiento: {{ exercise.time }} seg</div>
-                  <div>Reposo: {{ exercise.time }} seg</div>
-                </li>
-              </ul>
-            </div>
-            <div class="sortable">
-              <ul style="height: auto; width: 100%; position: relative;">
-                <li class="green" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Ejercicios' }">
-                  <header>{{ exercise.name }}</header>
-                  <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
-                  <div>Series: {{ exercise.series }}</div>
-                  <div>Repeticiones: {{ exercise.reps }}</div>
-                  <div>Mantenimiento: {{ exercise.time }} seg</div>
-                  <div>Reposo: {{ exercise.time }} seg</div>
+                  <div class="extra-data">
+                    <div>Series: {{ exercise.series }}</div>
+                    <div>Repeticiones: {{ exercise.reps }}</div>
+                    <div>Mantenimiento: {{ exercise.time }} seg</div>
+                    <div>Reposo: {{ exercise.time }} seg</div>
+                  </div>
                 </li>
               </ul>
             </div>

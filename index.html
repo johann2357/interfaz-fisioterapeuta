@@ -163,33 +163,48 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="row limited-row">
                 <div class="col-md-6 exercise-container">
                   <div>
                     <h4>ELEGIR EJERCICIO</h4>
                   </div>
-                  <ul class="exercise-list">
-                    <li class="exercise-box">
-                      <img src="static/images/exercise.png" class="exercise-img">
-                      <div class="exercise-title">FLEXIONAR RODILLA</div>
-                      <div class="exercise-plus"><i class="fa fa-plus"></i>
-                    </li>
-                    <li class="exercise-box">
-                      <img src="static/images/exercise.png" class="exercise-img">
-                      <div class="exercise-title">ESTIRAR RODILLA</div>
-                      <div class="exercise-plus"><i class="fa fa-plus"></i>
-                    </li>
-                  </ul>
+                  <div class="sortable" ng-repeat="fase_name in ['Estiramiento', 'Calentamiento', 'Ejercicios']">
+                    <ul style="height: auto; width: 100%; position: relative;">
+                      <li ng-class="{'blue': fase_name == 'Estiramiento',
+                                    'green': fase_name == 'Ejercicios',
+                                    'red': fase_name == 'Calentamiento'}"
+                          ng-repeat="exercise in curPatient.exercises | filter: { fase:fase_name }">
+                        <header>{{ exercise.name }}</header>
+                        <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
+                        <div class="extra-data">
+                          <div>Series: {{ exercise.series }}</div>
+                          <div>Repeticiones: {{ exercise.reps }}</div>
+                          <div>Mantenimiento: {{ exercise.time }} seg</div>
+                          <div>Reposo: {{ exercise.time }} seg</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="col-md-6 selected-container">
                   <h4>SELECCIONADOS</h4>
-                  <ul class="exercise-list">
-                    <li class="exercise-box">
-                      <img src="static/images/exercise.png" class="exercise-img">
-                      <div class="exercise-title">FLEXION PIERNAS</div>
-                      <div class="exercise-plus"><i class="fa fa-times"></i>
-                    </li>
-                  </ul>
+                  <!-- <div class="sortable" ng-repeat="fase_name in ['Estiramiento', 'Calentamiento', 'Ejercicios']">
+                    <ul style="height: auto; width: 100%; position: relative;">
+                      <li ng-class="{'blue': fase_name == 'Estiramiento',
+                                    'green': fase_name == 'Ejercicios',
+                                    'red': fase_name == 'Calentamiento'}"
+                          ng-repeat="exercise in curPatient.exercises.slice(0, 2) | filter: { fase:fase_name }">
+                        <header>{{ exercise.name }}</header>
+                        <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
+                        <div class="extra-data">
+                          <div>Series: {{ exercise.series }}</div>
+                          <div>Repeticiones: {{ exercise.reps }}</div>
+                          <div>Mantenimiento: {{ exercise.time }} seg</div>
+                          <div>Reposo: {{ exercise.time }} seg</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div> -->
                 </div>
               </div>
             </div>

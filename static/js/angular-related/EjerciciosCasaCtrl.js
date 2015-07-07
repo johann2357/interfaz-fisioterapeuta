@@ -8,8 +8,14 @@ angular.module('app').
                 $(".sortable ul").sortable({
                     revert: 300,
                 });
+
+                $(".sortable li").click(function () {
+                    $(this).find(".extra-data").toggle();
+                });
             }
 
-            $scope.init();
+            setTimeout(function () {
+                $scope.init();
+            }, 100);
 
         }]);

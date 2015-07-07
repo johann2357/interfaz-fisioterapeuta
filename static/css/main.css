@@ -174,7 +174,7 @@ body
 .sortable
 {
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   moz-transition: opacity .6s;
   ms-transition: opacity .6s;
   opacity: .8;
@@ -188,29 +188,48 @@ body
 }
 .sortable li
 {
+  vertical-align: top;
   background: #E8EAF6;
   cursor: pointer;
   display: inline-block;
   font-size: 1em;
   font-weight: bold;
-  height: 260px;
   line-height: 100%;
   margin: 5px;
   text-align: center;
   width: 220px;
 }
 .sortable li.red {
-  background: red;
+  background: #f66;
+}
+.sortable li.red header {
+  background: #f44;
 }
 .sortable li.blue {
-  background: steelblue;
+  background: #44f;
+  color: white;
+}
+.sortable li.blue header {
+  background: #66f;
+  color: white;
 }
 .sortable li.green {
-  background: green;
+  background: #4f4;
+}
+.sortable li.green header {
+  background: #6f6;
+  color: black;
+}
+.sortable li img {
+  padding: 5px;
 }
 .sortable .player
 {
   background: #C5CAE9;
+}
+.sortable .extra-data {
+  display: none;
+  padding: 5px;
 }
 .sortable .preview-holder
 {
@@ -225,7 +244,6 @@ body
   display: block;
   font-size: 15px;
   line-height: normal;
-  margin-bottom: 20px;
   padding: 8px 0;
 }
 .modal div.search-input
@@ -291,4 +309,14 @@ div.report-card
 .btn-horario
 {
   margin-top: 300px;
+}
+
+
+.modal-lg {
+  width: 1060px;
+}
+
+.limited-row {
+  height: 400px;
+  overflow-y: scroll;
 }

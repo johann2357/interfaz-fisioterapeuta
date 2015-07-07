@@ -7,7 +7,7 @@
     var eventData1 = {
         options: {
             timeslotsPerHour: 4,
-            timeslotHeight: 20,
+            timeslotHeight: 5,
             defaultFreeBusy: {free: true}
         },
         events : [
@@ -36,7 +36,7 @@
     var eventData2 = {
         options: {
             timeslotsPerHour: 3,
-            timeslotHeight: 30,
+            timeslotHeight: 8,
             defaultFreeBusy: {free: false}
         },
         events : [
@@ -73,7 +73,7 @@
             timeslotsPerHour: 4,
             scrollToHourMillis : 0,
             height: function($calendar){
-                return $(window).height() - $('h1').outerHeight(true);
+                return $(window).height() - $('h2').outerHeight(true);
             },
             eventRender : function(calEvent, $event) {
                 if(calEvent.end.getTime() < new Date().getTime()) {

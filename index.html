@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
   <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -46,12 +46,45 @@
               </a>
             </li>
           </ul>
+          <ul class="btn-horario">
+            <li class="">
+              <a id="show-horario" data-toggle="modal" data-target="#horario-modal">
+                <button class="btn btn-primary">Horario</button>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <div ng-view></div>
         </div>
       </div>
     </div>
+    <!-- MODAL ADD EXERCISE -->
+    <div class="modal fade" role="dialog" id="horario-modal"
+         aria-labelledby="gridSystemModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close"
+                    data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="gridSystemModalLabel">
+              Horario
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              TODO: horario :P
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- MODAL ADD EXERCISE -->
     <div class="modal fade" role="dialog" id="add-exercise-modal"

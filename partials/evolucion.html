@@ -1,10 +1,10 @@
 <div patient-profile></div>
 <div patient-tabs></div>
 
-<div class="main-container evolucion">
+<div class="main-container historial">
 
     <form class="form-horizontal grouped-form">
-        <div class="week-commands">
+        <div class="commands">
             <button><i class="fa fa-angle-double-up"/></button>
             <button><i class="fa fa-angle-up"/></button>
             <button onclick="$('#calendar').toggle()"><i class="fa fa-calendar"/></button>
@@ -12,8 +12,8 @@
             <button><i class="fa fa-angle-down"/></button>
             <button><i class="fa fa-angle-double-down"/></button>
         </div>
-        <div class="prev-weeks">
-            <div ng-repeat="item in items" class="week-item">
+        <div class="prev-items">
+            <div ng-repeat="item in items" class="item">
                 <span class="exit"><i class="fa fa-close"/></span>
                 <span class="edit"><i class="fa fa-pencil"/></span>
                 <b>{{ item.fecha }}</b>

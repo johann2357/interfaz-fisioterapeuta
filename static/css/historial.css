@@ -1,14 +1,14 @@
-.main-container.evolucion button.save {
+.main-container.historial button.save {
     position: absolute;
     top: 17px;
     right: 10px;
 }
 
-.main-container.evolucion .user-input {
+.main-container.historial .user-input {
     position: relative;
 }
 
-.main-container.evolucion .week-item {
+.main-container.historial .item {
     padding: 15px;
     padding-right: 40px;
     border: 1px solid steelblue;
@@ -17,8 +17,8 @@
     position: relative;
 }
 
-.main-container.evolucion .week-item .exit,
-.main-container.evolucion .week-item .edit {
+.main-container.historial .item .exit,
+.main-container.historial .item .edit {
     color: white;
     border-radius: 9999px;
     width: 25px;
@@ -27,27 +27,27 @@
     cursor: pointer;
 }
 
-.main-container.evolucion .week-item .exit {
+.main-container.historial .item .exit {
     background: red;
     position: absolute;
     top: 10px;
     right: 10px;
 }
 
-.main-container.evolucion .week-item .edit {
+.main-container.historial .item .edit {
     background: steelblue;
     position: absolute;
     bottom: 10px;
     right: 10px;
 }
 
-.main-container.evolucion .prev-weeks {
+.main-container.historial .prev-items {
     height: 360px;
     overflow-y: scroll;
     margin-left: 50px;
 }
 
-.main-container.evolucion .week-commands {
+.main-container.historial .commands {
     width: 30px;
     position: absolute;
     padding-top: 120px;
@@ -55,11 +55,11 @@
     left: 15px;
 }
 
-.main-container.evolucion .week-commands button {
+.main-container.historial .commands button {
     width: 40px;
 }
 
-.main-container.evolucion .week-commands #calendar {
+.main-container.historial .commands #calendar {
     position: absolute;
     left: 40px;
     top: 150px;

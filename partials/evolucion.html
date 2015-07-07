@@ -1,7 +1,32 @@
 <div patient-profile></div>
 <div patient-tabs></div>
 
-<div class="main-container">
-  <img src="static/images/interfaces/Evolucion semanal.jpg"
-       width="100%">
+<div class="main-container evolucion">
+
+    <form class="form-horizontal grouped-form">
+        <div class="week-commands">
+            <button><i class="fa fa-angle-double-up"/></button>
+            <button><i class="fa fa-angle-up"/></button>
+            <button onclick="$('#calendar').toggle()"><i class="fa fa-calendar"/></button>
+            <img id="calendar" src="static/images/datepicker.png"/>
+            <button><i class="fa fa-angle-down"/></button>
+            <button><i class="fa fa-angle-double-down"/></button>
+        </div>
+        <div class="prev-weeks">
+            <div ng-repeat="item in items" class="week-item">
+                <span class="exit"><i class="fa fa-close"/></span>
+                <span class="edit"><i class="fa fa-pencil"/></span>
+                <b>{{ item.fecha }}</b>
+                <br>
+                {{ item.data }}
+            </div>
+        </div>
+        <br>
+        Esta semana el paciente:
+        <div class="user-input">
+            <textarea class="form-control" ng-model="newItem"></textarea>
+            <button ng-click="items.push({fecha: 'Hoy', data: newItem}); newItem = '';"
+                    class="btn btn-success save"><i class="fa fa-check"/></button>  
+        </div>
+    </form>
 </div>

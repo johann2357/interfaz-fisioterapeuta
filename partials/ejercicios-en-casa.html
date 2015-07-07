@@ -6,7 +6,7 @@
             <!-- FUENTE : http://ejercicios-terapeuticos.blogspot.com/p/ejercicios-de-williams.html -->
             <div class="sortable">
               <ul style="height: auto; width: 100%; position: relative;">
-                <li class="exercise blue" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Estiramiento' }">
+                <li class="blue" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Estiramiento' }">
                   <header>{{ exercise.name }}</header>
                   <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
                   <div>Series: {{ exercise.series }}</div>
@@ -18,7 +18,7 @@
             </div>
             <div class="sortable">
               <ul style="height: auto; width: 100%; position: relative;">
-                <li class="exercise red" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Calentamiento' }">
+                <li class="red" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Calentamiento' }">
                   <header>{{ exercise.name }}</header>
                   <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
                   <div>Series: {{ exercise.series }}</div>
@@ -28,10 +28,9 @@
                 </li>
               </ul>
             </div>
-            <h2>Ejercicios</h2>
             <div class="sortable">
               <ul style="height: auto; width: 100%; position: relative;">
-                <li class="exercise green" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Ejercicios' }">
+                <li class="green" ng-repeat="exercise in curPatient.exercises | filter: { fase:'Ejercicios' }">
                   <header>{{ exercise.name }}</header>
                   <img ng-src="{{ exercise.pic }}" width="120px" height="120px"></img>
                   <div>Series: {{ exercise.series }}</div>
